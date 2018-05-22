@@ -1,20 +1,27 @@
-<h1>Dashboard#main</h1>
-<p>Find me in app/views/dashboard/main.html.erb</p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="col-md-12">
+  <h1>Dashboard</h1>
+  <p>Find me in app/views/dashboard/main.html.erb</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th colspan="3">Status</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @agents.each do |agent| %>
-      <tr>
-        <td><%= agent.name %></td>
-        <td><%= agent.description %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @agents.each do |agent| %>
+          <tr>
+            <td><%= agent.name %></td>
+            <td><%= agent.description %></td>
+            <td>Enabled</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
